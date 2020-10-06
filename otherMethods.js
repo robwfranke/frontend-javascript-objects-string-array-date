@@ -42,7 +42,6 @@
 
 
 
-
 /* BONUS OPDRACHT (als je tijd over hebt) */
 // Schrijf een functie die twee strings als parameters verwacht en de langste naam teruggeeft.
 // als de namen beide even lang zijn geeft hij de string "Beide namen zijn even lang" terug
