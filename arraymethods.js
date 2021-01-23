@@ -15,15 +15,13 @@ console.log();
 
 console.log("Opdracht 1b");
 
-const x= emailadresses.includes("n.stuivenberg@novi.nl")
-if (x ===true)
-{
+const x = emailadresses.includes("n.stuivenberg@novi.nl")
+if (x === true) {
     console.log("bevat adres Nick")
-}else{
+} else {
     console.log("bevat geen adres Nick")
 }
 console.log();
-
 
 
 // 1c. Collega's staan in de emaillijst op volgorde waarin ze bij Novi zjin komen werken. Nu blijkt echter dat een andere collega, Tess,
@@ -32,10 +30,10 @@ console.log();
 console.log("Opdracht 1c")
 
 console.log(emailadresses)
-lengthOfEmailadresse= emailadresses.length;
+lengthOfEmailadresse = emailadresses.length;
 console.log("aantal adressen = " + lengthOfEmailadresse)
 
-emailadresses.splice(lengthOfEmailadresse-1,0,"t.mellink@novi.nl")
+emailadresses.splice(lengthOfEmailadresse - 1, 0, "t.mellink@novi.nl")
 
 console.log(emailadresses)
 
@@ -46,4 +44,56 @@ console.log(emailadresses)
 // Deze functie achterhaalt het indexnummer van het oude emailadres en vervangt dit vervolgens voor het nieuwe adres.
 // TIP: schrijf 'm eerst zoals je hem zou toepassen op bovenstaande array en schrijf die code dan om naar een functie
 
+// [
+// 'n.eeken@novi.nl',
+//     'n.stuivenberg@novi.nl',
+//     'm.vandergeest@novi-education.nl',  DEZE NAAR    m.vandergeest@novi.nl
+//     'a.wiersma@novi.nl',
+//     't.mellink@novi.nl',
+//     'm.westerbroek@novi.nl'
+// ]
 
+
+console.log("Opdracht 1d")
+// //stap 1 zoek index nummer, checked niet of naam er meerdere keren in staat
+//
+// let numberOfIndex = emailadresses.indexOf("m.vandergeest@novi-education.nl");
+//
+// //stap 2 vervang nu met slice het emailadres
+//
+// emailadresses.splice(numberOfIndex, 1, "m.vandergeest@novi.nl")
+
+
+
+function replaceEmailAdress(array, adresOld, adresNew) {
+    console.log(array)
+    console.log(adresOld)
+    console.log(adresNew)
+
+    let numberOfIndex1 = array.indexOf(adresOld);
+
+
+
+
+array.splice(numberOfIndex1,1,adresNew)    // array.splice(numberOfIndex1,1,adresNew);
+    console.log(array);
+
+return array;
+
+
+}
+console.log("laatste stukje")
+
+array =['n.eeken@novi.nl',
+    'n.stuivenberg@novi.nl',
+    'm.vandergeest@novi.nl',
+    'a.wiersma@novi.nl',
+    't.mellink@novi.nl',
+    'm.westerbroek@novi.nl']
+
+adressToChange='a.wiersma@novi.nl'
+adresToChangeTo= "hallo@novi.nl"
+
+console.log(replaceEmailAdress(array,adressToChange,adresToChangeTo));
+
+console.log()
